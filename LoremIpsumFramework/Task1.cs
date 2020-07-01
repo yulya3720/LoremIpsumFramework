@@ -1,5 +1,4 @@
-﻿//using Microsoft.VisualStudio.TestTools.UnitTesting;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using System;
@@ -8,11 +7,9 @@ using System.Linq;
 
 namespace LoremIpsum2Tasks
 {
-    //[TestClass()]
     [TestFixture]
     public class Tasks
     {
-       //[TestMethod()]
        [Test]
         public void CheckPresenceOfWord()
         {
@@ -27,12 +24,11 @@ namespace LoremIpsum2Tasks
 
             string paragraph1 = driver.FindElement(By.XPath("//*[@id=\"Panes\"]/div[1]/p[1]")).Text; 
 
-          
             driver.Close();
+
             Assert.IsTrue(paragraph1.Contains("рыба"));
         }
 
-        // [TestMethod()]
         [Test]
         public void CheckNumberOfParagraphsWithWord()
         {

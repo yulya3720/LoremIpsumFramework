@@ -3,7 +3,6 @@ using OpenQA.Selenium.Chrome;
 using System;
 using System.Collections.Generic;
 using OpenQA.Selenium.Support.PageObjects;
-using System.Linq;
 using NUnit.Framework;
 
 namespace LoremIpsumFramework
@@ -17,7 +16,6 @@ namespace LoremIpsumFramework
             driver = new ChromeDriver();
             PageFactory.InitElements(driver, this);
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
-
         }
 
         [FindsBy(How = How.XPath, Using = "//*[@id=\"Languages\"]/a[@class=\"ru\"]")]

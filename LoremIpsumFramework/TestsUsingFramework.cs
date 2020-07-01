@@ -1,7 +1,6 @@
 ﻿using NUnit.Framework;
 using System.Collections.Generic;
 
-
 namespace LoremIpsumFramework
 {
     [TestFixture]
@@ -18,7 +17,6 @@ namespace LoremIpsumFramework
             main.SwitchLanguageToRussian();
 
             string text = main.GetLIpsumMainText();
-
 
             Assert.IsTrue(text.Contains("рыба"));
         }
